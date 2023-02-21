@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1642bd49.css",
+    "main.js": "/static/js/main.f888c7c8.js",
+    "static/media/images9.png": "/static/media/images9.7defd559d87b083fa20b.png",
+    "static/media/bg-footer.jpg": "/static/media/bg-footer.5276200d43a2cd673d2f.jpg",
+    "static/media/slide5.jpg": "/static/media/slide5.2b93233ac2004b026217.jpg",
+    "static/media/slide6.png": "/static/media/slide6.30a81053c2417dc75755.png",
+    "static/media/slide3.jpg": "/static/media/slide3.f8367d342c2c0133ed72.jpg",
+    "static/media/news1.jpg": "/static/media/news1.aa8efa19401c2aff49c9.jpg",
+    "static/media/images5.jpg": "/static/media/images5.3ef77bd41f93a63d4c09.jpg",
+    "static/media/images6.jpg": "/static/media/images6.693eddc4e8cd1576988a.jpg",
+    "static/media/slide2.jpg": "/static/media/slide2.5ed0d4421d55cdedcf01.jpg",
+    "static/media/slide4.jpg": "/static/media/slide4.879f9114b069f1c04d49.jpg",
+    "static/media/slide1.jpg": "/static/media/slide1.a97054cc831792fbba70.jpg",
+    "static/media/images7.jpg": "/static/media/images7.a69c370a9e02be57b6b6.jpg",
+    "static/media/images3.jpg": "/static/media/images3.1564964b11e1543ee66d.jpg",
+    "static/media/images4.jpg": "/static/media/images4.99ba89e32985548b681d.jpg",
+    "static/media/news2.jpg": "/static/media/news2.954578855aa04e5b65be.jpg",
+    "static/media/images2.png": "/static/media/images2.1902c58d80543e5e756e.png",
+    "static/media/corusel6.jpg": "/static/media/corusel6.f0169ea46a99258d3863.jpg",
+    "static/media/images8.jpg": "/static/media/images8.792c6f1e102e7e170fd3.jpg",
+    "static/media/9A3YeyROAEWs.png": "/static/media/9A3YeyROAEWs.de46ff8bb1475618063e.png",
+    "static/media/corusel4.jpg": "/static/media/corusel4.f882a6873bb3fbf37714.jpg",
+    "static/media/corusel3.jpg": "/static/media/corusel3.a337018acc990eef5a7c.jpg",
+    "static/media/corusel1.jpg": "/static/media/corusel1.bf8fdfd384b26728e0e7.jpg",
+    "static/media/corusel5.jpg": "/static/media/corusel5.51f441fee80d1839495a.jpg",
+    "static/media/corusel2.jpg": "/static/media/corusel2.2bef16ae02825ff25723.jpg",
+    "static/media/news3.jpg": "/static/media/news3.aaf0f154109f97ac8d27.jpg",
+    "index.html": "/index.html",
+    "main.1642bd49.css.map": "/static/css/main.1642bd49.css.map",
+    "main.f888c7c8.js.map": "/static/js/main.f888c7c8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1642bd49.css",
+    "static/js/main.f888c7c8.js"
+  ]
+}
