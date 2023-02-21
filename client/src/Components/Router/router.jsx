@@ -9,27 +9,27 @@ export default function Router() {
   const data = [
     {
       path: "/",
-      element: <Main />,
+      element: <Main active={true} />,
       exact: false,
     },
     {
       path: "/product",
-      element: <Product />,
+      element: <Product active={true} />,
       exact: false,
     },
     {
       path: "/about",
-      element: <About />,
+      element: <About active={true} />,
       exact: false,
     },
     {
       path: "/contact",
-      element: <Contacts />,
+      element: <Contacts active={true} />,
       exact: false,
     },
     {
       path: "/news",
-      element: <News />,
+      element: <News active={true} />,
       exact: false,
     },
   ];

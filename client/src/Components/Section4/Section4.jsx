@@ -12,7 +12,7 @@ export default function Section4() {
           ВОПЛОТИ ЭТО В<span> ЖИЗНЬ !</span>
         </h1>
         <div className="call_btn">
-          <a href="tel:+">ПОЛУЧИТЬ ЗВОНОК</a>
+          <a href="tel:+998339091111">ПОЛУЧИТЬ ЗВОНОК</a>
         </div>
       </div>
     </section>

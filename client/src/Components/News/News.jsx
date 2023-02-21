@@ -10,7 +10,7 @@ import bg from "../../images/bg-footer.jpg";
 export default function News() {
   return (
     <div>
-      <Header />
+      <Header news={true} />
       <Parallax
         style={{ width: "100%" }}
         bgImageSize={{ width: "100%" }}

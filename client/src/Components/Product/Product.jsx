@@ -191,7 +191,7 @@ EcoPanelTech является пионерами передовых технол
   const [current, setCurrent] = useState(0);
   return (
     <div>
-      <Header />
+      <Header pro={true} />
       <Parallax
         style={{ width: "100%" }}
         bgImageSize={{ width: "100%" }}

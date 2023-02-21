@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
-export default function Header() {
+export default function Header({ main, cont, pro, about, news }) {
   const [classses, setClasses] = useState("navbar");
   const hendleBar = () => {
     if (classses === "navbar") {
@@ -46,19 +46,19 @@ export default function Header() {
         </div>
 
         <ul className={classses}>
-          <Link to="/" className="nav_link active">
+          <Link to="/" className={`nav_link ${main ? "active" : null}`}>
             <li className="nav_item">Главная</li>
           </Link>
-          <Link to="/product" className="nav_link">
+          <Link to="/product" className={`nav_link ${pro ? "active" : null}`}>
             <li className="nav_item">Вся продукция</li>
           </Link>
-          <Link to="/contact" className="nav_link">
+          <Link to="/contact" className={`nav_link ${cont ? "active" : null}`}>
             <li className="nav_item">Наши контакты</li>
           </Link>
-          <Link to="/news" className="nav_link">
+          <Link to="/news" className={`nav_link ${news ? "active" : null}`}>
             <li className="nav_item">Новости</li>
           </Link>
-          <Link to="/about" className="nav_link">
+          <Link to="/about" className={`nav_link ${about ? "active" : null}`}>
             <li className="nav_item">О нас</li>
           </Link>
         </ul>

@@ -8,7 +8,7 @@ import Contact from "../Contact";
 export default function About() {
   return (
     <section className="about">
-      <Header />
+      <Header about={true} />
       <Parallax
         style={{ width: "100%" }}
         bgImageSize={{ width: "100%" }}
@@ -81,8 +81,8 @@ export default function About() {
             </div>
           </div>
         </div>
-          </div>
-          <Contact/>
+      </div>
+      <Contact />
       <Footer />
     </section>
   );

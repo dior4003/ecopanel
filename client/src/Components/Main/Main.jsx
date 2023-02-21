@@ -8,10 +8,10 @@ import Section4 from "../Section4";
 import Section5 from "../Section5";
 import Section6 from "../Section6";
 
-export default function Main() {
+export default function Main({active}) {
   return (
     <>
-      <Header />
+      <Header main={true} />
       <Hero />
       <Section2 />
       <Section3 />

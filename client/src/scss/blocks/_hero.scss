@@ -1,3 +1,137 @@
+.call {
+  .call-btn {
+    position: fixed;
+    bottom: 6%;
+    right: 6%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+  }
+
+  .pulse,
+  .cursor,
+  .phone {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  .cursor {
+    cursor: pointer;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .pulse {
+    background: #5cc2e2;
+    position: relative;
+    transition: 0.5s ease-in-out;
+  }
+
+  .phone {
+    font-size: 30px;
+    line-height: 58px;
+    -webkit-animation: phone 0.9s ease-in-out infinite;
+    animation: phone 0.9s ease-in-out infinite;
+  }
+
+  .pulse .text {
+    position: absolute;
+    opacity: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    top: 50%;
+    font-size: 8px;
+    transform: scaleX(-1);
+    transition: 0.5s ease-in-out;
+  }
+
+  .phone i {
+    transition: 0.5s ease-in-out;
+  }
+
+  .pulse:hover {
+    background: #29aee3;
+  }
+
+  .pulse:hover i {
+    transform: scale(0);
+  }
+
+  .pulse:hover .text {
+    transform: scaleX(1) translateY(-40%);
+    opacity: 1;
+  }
+
+  .pulse:hover::before,
+  .pulse:hover::after {
+    content: "";
+    position: absolute;
+    border: 1px solid #29aee3;
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    -webkit-animation: pulse 1.8s linear infinite;
+    animation: pulse 1.8s linear infinite;
+    opacity: 0;
+  }
+
+  .pulse:hover::after {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+  }
+
+  @-webkit-keyframes phone {
+    0%,
+    100% {
+      transform: rotate(-20deg);
+    }
+    50% {
+      transform: rotate(21deg);
+    }
+  }
+
+  @keyframes phone {
+    0%,
+    100% {
+      transform: rotate(-20deg);
+    }
+    50% {
+      transform: rotate(21deg);
+    }
+  }
+  @-webkit-keyframes pulse {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+  }
+}
+
 .hero {
   width: 100%;
   position: relative;
@@ -17,6 +151,7 @@
       filter: contrast(175%) brightness(103%);
     }
   }
+
   .sliders {
     width: 100%;
     height: 100%;

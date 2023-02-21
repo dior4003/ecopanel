@@ -727,6 +727,99 @@ body {
     border-radius: 6px;
   }
 }
+.call .call-btn {
+  position: fixed;
+  bottom: 6%;
+  right: 6%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+.call .pulse,
+.call .cursor,
+.call .phone {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+}
+.call .cursor {
+  cursor: pointer;
+  z-index: 2;
+  overflow: hidden;
+}
+.call .pulse {
+  background: #5cc2e2;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+.call .phone {
+  font-size: 30px;
+  line-height: 58px;
+  animation: phone 0.9s ease-in-out infinite;
+}
+.call .pulse .text {
+  position: absolute;
+  opacity: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  top: 50%;
+  font-size: 8px;
+  transform: scaleX(-1);
+  transition: 0.5s ease-in-out;
+}
+.call .phone i {
+  transition: 0.5s ease-in-out;
+}
+.call .pulse:hover {
+  background: #29aee3;
+}
+.call .pulse:hover i {
+  transform: scale(0);
+}
+.call .pulse:hover .text {
+  transform: scaleX(1) translateY(-40%);
+  opacity: 1;
+}
+.call .pulse:hover::before,
+.call .pulse:hover::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #29aee3;
+  left: -20px;
+  right: -20px;
+  top: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  animation: pulse 1.8s linear infinite;
+  opacity: 0;
+}
+.call .pulse:hover::after {
+  animation-delay: 0.5s;
+}
+@keyframes phone {
+  0%, 100% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(21deg);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
 .hero {
   width: 100%;
   position: relative;
