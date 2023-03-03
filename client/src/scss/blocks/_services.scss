@@ -1,0 +1,697 @@
+.services__ {
+  height: 20rem;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://demo.ovatheme.com/transflash/wp-content/uploads/2021/12/header-banner-service.jpg);
+  .container_70 {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    .title {
+      color: #fff;
+      font-size: 48px;
+      font-weight: 600;
+    }
+    .link {
+      color: gray;
+      font-size: 20px;
+      font-family: "Courier New", Courier, monospace;
+      a {
+        color: rgb(201, 201, 201);
+        text-decoration: none;
+        padding: 5px 10px;
+        transition: 0.3 all linear;
+        &:hover {
+          color: #47bf6f;
+        }
+      }
+      span {
+        color: rgb(201, 201, 201);
+      }
+    }
+  }
+}
+.all_services {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container_70 {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: flex-start;
+    .sidebar {
+      width: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      border-right: 1px solid gray;
+      .header {
+        width: 70%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 1px solid #000;
+        .title {
+          margin: 0;
+          padding: 0;
+        }
+      }
+      .tabs {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        list-style: none;
+        padding: 10px 0;
+        .item {
+          padding: 3px 20px;
+          font-size: 24px;
+          font-weight: 700;
+          border-left: 3px solid rgb(195, 195, 195);
+          margin: 10px;
+          color: gray;
+          cursor: pointer;
+        }
+        .active {
+          padding: 3px 20px;
+          font-size: 24px;
+          font-weight: 700;
+          border-left: 3px solid #47bf6f;
+          margin: 10px;
+          color: #000;
+          cursor: pointer;
+        }
+      }
+      .help {
+        background: url(https://demo.ovatheme.com/transflash/wp-content/uploads/2021/12/contact-card.jpg);
+        height: 40rem;
+        width: 90%;
+        background-size: cover;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        .title {
+          font-size: 28px;
+          line-height: 30px;
+        }
+        .btn__ {
+          margin-top: 25px;
+          text-decoration: none;
+          font-weight: 700;
+        }
+      }
+    }
+    .content {
+      width: 70%;
+      display: flex;
+      height: 70rem;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: transparent;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: transparent;
+      }
+      .content__ {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .decr {
+          width: 100%;
+          padding: 20px 0;
+          .p_decr {
+            font-size: 18px;
+            color: gray;
+            line-height: 30px;
+          }
+        }
+        .content_img {
+          width: 100%;
+        }
+        .p_decr {
+          font-size: 18px;
+          color: gray;
+          line-height: 30px;
+        }
+        .title {
+          font-size: 32px;
+          padding: 10px 0;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .services__ {
+    height: 16rem;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: url(https://demo.ovatheme.com/transflash/wp-content/uploads/2021/12/header-banner-service.jpg);
+    .container_70 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      .title {
+        color: #fff;
+        font-size: 48px;
+        font-weight: 600;
+      }
+      .link {
+        color: gray;
+        font-size: 20px;
+        font-family: "Courier New", Courier, monospace;
+        a {
+          color: rgb(201, 201, 201);
+          text-decoration: none;
+          padding: 5px 10px;
+          transition: 0.3 all linear;
+          &:hover {
+            color: #47bf6f;
+          }
+        }
+        span {
+          color: rgb(201, 201, 201);
+        }
+      }
+    }
+  }
+  .all_services {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container_70 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 50px;
+      align-items: flex-start;
+      .sidebar {
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        border-right: 1px solid gray;
+        .header {
+          width: 70%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          border-bottom: 1px solid #000;
+          .title {
+            margin: 0;
+            padding: 0;
+          }
+        }
+        .tabs {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+          list-style: none;
+          padding: 10px 0;
+          .item {
+            padding: 3px 20px;
+            font-size: 24px;
+            font-weight: 700;
+            border-left: 3px solid rgb(195, 195, 195);
+            margin: 10px;
+            color: gray;
+            cursor: pointer;
+          }
+          .active {
+            padding: 3px 20px;
+            font-size: 24px;
+            font-weight: 700;
+            border-left: 3px solid #47bf6f;
+            margin: 10px;
+            color: #000;
+            cursor: pointer;
+          }
+        }
+        .help {
+          background: url(https://demo.ovatheme.com/transflash/wp-content/uploads/2021/12/contact-card.jpg);
+          height: 40rem;
+          width: 90%;
+          background-size: cover;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          .title {
+            font-size: 28px;
+            line-height: 30px;
+          }
+          .btn__ {
+            margin-top: 25px;
+            text-decoration: none;
+            font-weight: 700;
+          }
+        }
+      }
+      .content {
+        width: 60%;
+        display: flex;
+        height: 70rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: transparent;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+          background: transparent;
+        }
+        .content__ {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          .decr {
+            width: 100%;
+            padding: 20px 0;
+            .p_decr {
+              font-size: 18px;
+              color: gray;
+              line-height: 30px;
+            }
+          }
+          .content_img {
+            width: 100%;
+          }
+          .p_decr {
+            font-size: 18px;
+            color: gray;
+            line-height: 30px;
+          }
+          .title {
+            font-size: 32px;
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .services__ {
+    height: 16rem;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: url(https://demo.ovatheme.com/transflash/wp-content/uploads/2021/12/header-banner-service.jpg);
+    .container_70 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      .title {
+        color: #fff;
+        font-size: 48px;
+        font-weight: 600;
+      }
+      .link {
+        color: gray;
+        font-size: 20px;
+        font-family: "Courier New", Courier, monospace;
+        a {
+          color: rgb(201, 201, 201);
+          text-decoration: none;
+          padding: 5px 10px;
+          transition: 0.3 all linear;
+          &:hover {
+            color: #47bf6f;
+          }
+        }
+        span {
+          color: rgb(201, 201, 201);
+        }
+      }
+    }
+  }
+  .all_services {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container_70 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 50px;
+      align-items: flex-start;
+      .sidebar {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        border-right: 1px solid gray;
+        .header {
+          width: 70%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          border-bottom: 1px solid #000;
+          margin: 0;
+          padding: 0;
+          height: 50px;
+          .title {
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+          }
+        }
+        .tabs {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+          list-style: none;
+          padding: 10px 0;
+          .item {
+            padding: 3px 20px;
+            font-size: 17px;
+            font-weight: 700;
+            border-left: 3px solid rgb(195, 195, 195);
+            margin: 10px;
+            color: gray;
+            cursor: pointer;
+          }
+          .active {
+            padding: 3px 20px;
+            font-size: 17px;
+            font-weight: 700;
+            border-left: 3px solid #47bf6f;
+            margin: 10px;
+            color: #000;
+            cursor: pointer;
+          }
+        }
+        .help {
+          background: url(https://demo.ovatheme.com/transflash/wp-content/uploads/2021/12/contact-card.jpg);
+          height: 30rem;
+          width: 100%;
+          background-size: cover;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          .title {
+            font-size: 18px;
+            line-height: 25px;
+          }
+          .btn__ {
+            margin-top: 15px;
+            text-decoration: none;
+            font-weight: 700;
+          }
+        }
+      }
+      .content {
+        width: 70%;
+        display: flex;
+        height: 55rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: transparent;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+          background: transparent;
+        }
+        .content__ {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          .decr {
+            width: 100%;
+            padding: 20px 0;
+            .p_decr {
+              font-size: 18px;
+              color: gray;
+              line-height: 30px;
+            }
+          }
+          .content_img {
+            width: 100%;
+          }
+          .p_decr {
+            font-size: 18px;
+            color: gray;
+            line-height: 30px;
+          }
+          .title {
+            font-size: 32px;
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .services__ {
+    height: 16rem;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-position: center center;
+    background: url(https://demo.ovatheme.com/transflash/wp-content/uploads/2021/12/header-banner-service.jpg);
+    .container_70 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      .title {
+        color: #fff;
+        font-size: 48px;
+        font-weight: 600;
+      }
+      .link {
+        color: gray;
+        font-size: 20px;
+        font-family: "Courier New", Courier, monospace;
+        a {
+          color: rgb(201, 201, 201);
+          text-decoration: none;
+          padding: 5px 10px;
+          transition: 0.3 all linear;
+          &:hover {
+            color: #47bf6f;
+          }
+        }
+        span {
+          color: rgb(201, 201, 201);
+        }
+      }
+    }
+  }
+  .all_services {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container_70 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      align-items: center;
+      flex-direction: column;
+      .sidebar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        border-right: inherit;
+
+        .header {
+          width: 70%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          border-bottom: 1px solid #000;
+          margin: 0;
+          padding: 0;
+          height: 50px;
+          .title {
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+          }
+        }
+        .tabs {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          flex-direction: row;
+          list-style: none;
+          flex-wrap: wrap;
+          padding: 10px 0;
+          .item {
+            padding: 3px 10px;
+            font-size: 12px;
+            font-weight: 700;
+            border-left: inherit;
+            border-bottom: 3px solid rgb(195, 195, 195);
+            margin:20px 0;
+            color: gray;
+            cursor: pointer;
+          }
+          .active {
+            padding: 3px 10px;
+            font-size: 12px;
+            font-weight: 700;
+            border-left: inherit;
+            border-bottom: 3px solid #47bf6f;
+            margin: 20px 0;
+            color: #000;
+            cursor: pointer;
+          }
+        }
+        .help {
+          background: url(https://demo.ovatheme.com/transflash/wp-content/uploads/2021/12/contact-card.jpg);
+          height: 30rem;
+          display: none;
+          width: 100%;
+          background-size: cover;
+          padding: 20px;
+          flex-direction: column;
+          .title {
+            font-size: 18px;
+            line-height: 25px;
+          }
+          .btn__ {
+            margin-top: 15px;
+            text-decoration: none;
+            font-weight: 700;
+          }
+        }
+      }
+      .content {
+        width: 100%;
+        display: flex;
+        height: 55rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: transparent;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+          background: transparent;
+        }
+        .content__ {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          .decr {
+            width: 100%;
+            padding: 20px 0;
+            .p_decr {
+              font-size: 18px;
+              color: gray;
+              line-height: 30px;
+            }
+          }
+          .content_img {
+            width: 100%;
+          }
+          .p_decr {
+            font-size: 18px;
+            color: gray;
+            line-height: 30px;
+          }
+          .title {
+            font-size: 32px;
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}

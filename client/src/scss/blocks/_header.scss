@@ -1,61 +1,12 @@
-.get_call {
-  position: fixed;
-  right: 70px;
-  bottom: 150px;
-  z-index: 6;
-  border: 1px solid #31a357;
-  padding: 5px;
-  img {
-    width: 70px;
-    height: 70px;
-  }
-}
 
 .header {
   width: 100%;
-  height: 9rem;
+  height: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  .header_social {
-    height: 100px;
-    width: 100%;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    .conatiner_70 {
-      width: 65%;
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .parag {
-        color: #686767;
-        font-weight: 400;
-        font-size: 14px;
-        transition: 0.3s all linear;
-        text-decoration: none;
-        &:hover {
-          color: #fab702;
-        }
-      }
-      .social_links {
-        width: 30%;
-        display: flex;
-        justify-content: space-between;
-        i {
-          transition: 0.5s all linear;
-          font-size: 20px;
-        }
-        i:hover {
-          transform: translateY(-5px);
-        }
-      }
-    }
-  }
   .header_container {
-    width: 65%;
+    width: 70%;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -63,7 +14,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     .logo__box {
-      width: 15%;
+      width: 17%;
       height: 100%;
       display: flex;
       justify-content: flex-start;
@@ -71,35 +22,34 @@
 
       img {
         width: 100%;
+        border-right: 0.7px solid #aaa;
         padding: 0px 40px 0 0;
       }
     }
     .navbar {
-      width: 55%;
+      width: 40%;
       display: flex;
       justify-content: space-between;
       list-style: none;
       a {
         text-decoration: none;
-        color: #000;
+        color: gray;
         font-weight: 500;
-        font-size: 20px;
+        font-size: 18px;
         transition: 0.3s all linear;
         border-bottom: 0.3px solid transparent;
         &:hover {
-          color: #fab702;
-        }
-        &.active {
-          color: #fab702;
+          color: rgb(177, 177, 177);
+          border-bottom: 0.3px solid rgb(177, 177, 177);
         }
       }
     }
     .quote {
-      width: 15%;
+      width: 20%;
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      span {
+      a {
         text-decoration: none;
         padding: 10px 30px;
         background-color: #47bf6f1a;
@@ -113,6 +63,12 @@
         }
       }
     }
+    .active {
+      a {
+        color: #fff;
+        background-color: #31a357;
+      }
+    }
     .colapse_menu {
       display: none;
     }
@@ -120,32 +76,32 @@
 }
 @media (max-width: 1440px) {
   .header {
-    .header_social {
-      .conatiner_70 {
-        width: 90%;
-      }
-    }
     .header_container {
       width: 90%;
     }
   }
 }
 @media (max-width: 1024px) {
+  .get_call {
+    position: fixed;
+    right: 40px;
+    bottom: 80px;
+    z-index: 6;
+    padding: 5px;
+    img {
+      width: 40px;
+      height: 40px;
+      animation-name: call;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+  }
   .header {
     width: 100%;
     height: 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    .header_social {
-      .conatiner_70 {
-        padding: 0 20px;
-        width: 100%;
-        .social_links {
-          width: 40%;
-        }
-      }
-    }
     .header_container {
       width: 90%;
       height: 100%;
@@ -163,7 +119,7 @@
 
         img {
           width: 230px;
-
+          border-right: 0.7px solid #aaa;
           padding: 0px 40px 0 0;
         }
       }
@@ -173,7 +129,7 @@
         justify-content: center;
         align-items: center;
         .bar_btn {
-          color: rgb(250, 183, 2);
+          color: #31a357;
           font-size: 28px;
           z-index: 1000;
         }
@@ -202,6 +158,7 @@
         left: 0;
         margin: 0;
         background: rgb(19, 19, 19);
+        justify-content: flex-start;
         z-index: 999;
         transition: 0.4s all linear;
         transform: translateX(-100%);
@@ -256,11 +213,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .header_social {
-      display: none;
-    }
     .header_container {
-      width: 90%;
+      width: 100%;
       height: 100%;
       display: flex;
       justify-content: space-between;
@@ -276,6 +230,7 @@
 
         img {
           width: 180px;
+          border-right: 0.7px solid #aaa;
           padding: 0px 40px 0 0;
         }
       }
@@ -299,7 +254,7 @@
         justify-content: center;
         align-items: center;
         .bar_btn {
-          color: rgb(250, 183, 2);
+          color: #31a357;
         }
       }
       .navbar {

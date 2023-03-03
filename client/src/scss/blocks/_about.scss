@@ -1,276 +1,364 @@
-.about {
+.about__ {
+  height: 20rem;
   width: 100%;
-  .about_header {
-    height: 300px;
-    width: 100%;
-    background-color: #000000ab;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://demo.ovatheme.com/transflash/wp-content/uploads/2021/12/header-banner-service-air-freight.jpg);
+  .container_70 {
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    padding-left: 20%;
     .title {
       color: #fff;
       font-size: 48px;
+      font-weight: 600;
     }
-    .links {
+    .link {
+      color: gray;
+      font-size: 20px;
+      font-family: "Courier New", Courier, monospace;
       a {
-        color: #fff;
+        color: rgb(201, 201, 201);
         text-decoration: none;
-        padding: 0 15px 0 0;
-        transition: 0.3s all linear;
+        padding: 5px 10px;
+        transition: 0.3 all linear;
         &:hover {
-          color: rgb(250, 183, 2);
+          color: #47bf6f;
         }
       }
       span {
-        color: #fff;
+        color: rgb(201, 201, 201);
       }
     }
   }
-  .container-fluit {
-    width: 100%;
+}
+.abouts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  .container_70 {
+    width: 70%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    .container_70 {
-      width: 60%;
+    justify-content: space-between;
+    .info {
+      width: 50%;
       display: flex;
-      padding: 50px 0;
-      justify-content: space-between;
-      .info_box {
-        width: 50%;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 30px;
+      .tit {
+        font-size: 18px;
+        color: #000;
+        font-weight: 700;
+      }
+      .title {
+        font-size: 48px;
+        color: #000;
+        font-weight: 700;
+      }
+      .p_decr {
+        font-size: 18px;
+        color: gray;
+        line-height: 25px;
+      }
+      .tabs {
+        width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        flex-direction: column;
-        .info_title {
-          font-size: 18px;
-          letter-spacing: 4px;
+        list-style: none;
+        padding: 0;
+        .item {
+          width: 50%;
+          padding: 10px 20px 10px 0;
+          border-bottom: 2px solid gray;
+          font-size: 20px;
+          font-weight: 600;
+          color: gray;
+          
         }
-        .title1 {
-          font-size: 14px;
-          font-weight: 200;
-          line-height: 25px;
-          letter-spacing: 3px;
+        .active {
+          width: 50%;
+          padding: 10px 20px 10px 0;
+          border-bottom: 2px solid #47bf6f;
+          font-size: 20px;
+          font-weight: 600;
+          color: #000;
         }
       }
-      .progress_box {
-        margin-left: 30px;
-        width: 45%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        .progres_item {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          margin: 20px 0;
-          .progress {
-            width: 90%;
-            height: 15px;
-            border-bottom: 1px solid rgb(250, 183, 2);
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            .shape {
-              height: 100%;
-              width: 80%;
-              background-color: rgb(250, 183, 2);
+      .content {
+        list-style: none;
+        padding: 10px 0;
+        .item {
+            i{
+                font-size: 16px;
+                color: #47bf6f;
+                padding-right: 15px;
             }
-          }
-          .title {
-            margin-top: 30px;
-          }
+          padding: 10px 0 10px 0;
+          font-size: 24px;
+          color: gray;
         }
+      }
+    }
+    .img {
+      width: 50%;
+      margin-top: 50px;
+      img {
+        width: 100%;
       }
     }
   }
 }
 
-@media (max-width: 1440px) {
-  .about {
-    width: 100%;
-    .about_header {
-      height: 300px;
-      width: 100%;
-      background-color: #000000ab;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-direction: column;
-      padding-left: 20%;
-      .title {
-        color: #fff;
-        font-size: 48px;
-      }
-      .links {
-        a {
-          color: #fff;
-          text-decoration: none;
-          padding: 0 15px 0 0;
-          transition: 0.3s all linear;
-          &:hover {
-            color: rgb(250, 183, 2);
-          }
-        }
-        span {
-          color: #fff;
-        }
-      }
+@media (max-width:1440px){
+    .about__ {
+  height: 20rem;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://demo.ovatheme.com/transflash/wp-content/uploads/2021/12/header-banner-service-air-freight.jpg);
+  .container_70 {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    .title {
+      color: #fff;
+      font-size: 42px;
+      font-weight: 600;
     }
-    .container-fluit {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .container_70 {
-        width: 90%;
-        display: flex;
-        padding: 50px 0;
-        justify-content: space-between;
-        .info_box {
-          width: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          .info_title {
-            font-size: 18px;
-            letter-spacing: 4px;
-          }
-          .title1 {
-            font-size: 14px;
-            font-weight: 200;
-            line-height: 25px;
-            letter-spacing: 3px;
-          }
+    .link {
+      color: gray;
+      font-size: 20px;
+      font-family: "Courier New", Courier, monospace;
+      a {
+        color: rgb(201, 201, 201);
+        text-decoration: none;
+        padding: 5px 10px;
+        transition: 0.3 all linear;
+        &:hover {
+          color: #47bf6f;
         }
-        .progress_box {
-          margin-left: 30px;
-          width: 45%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          .progres_item {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            margin: 20px 0;
-            .progress {
-              width: 90%;
-              height: 15px;
-              border-bottom: 1px solid rgb(250, 183, 2);
-              display: flex;
-              justify-content: flex-start;
-              align-items: center;
-              .shape {
-                height: 100%;
-                width: 80%;
-                background-color: rgb(250, 183, 2);
-              }
-            }
-            .title {
-              margin-top: 30px;
-            }
-          }
-        }
+      }
+      span {
+        color: rgb(201, 201, 201);
       }
     }
   }
 }
-@media (max-width: 1024px) {
-  .about {
-    width: 100%;
-    .about_header {
-      height: 300px;
-      width: 100%;
-      background-color: #000000ab;
+.abouts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  .container_70 {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    .info {
+      width: 50%;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: flex-start;
       flex-direction: column;
-      padding-left: 20%;
-      .title {
-        color: #fff;
-        font-size: 48px;
+      padding: 30px;
+      .tit {
+        font-size: 18px;
+        color: #000;
+        font-weight: 700;
       }
-      .links {
-        a {
-          color: #fff;
-          text-decoration: none;
-          padding: 0 15px 0 0;
-          transition: 0.3s all linear;
-          &:hover {
-            color: rgb(250, 183, 2);
-          }
+      .title {
+        font-size: 36px;
+        color: #000;
+        font-weight: 700;
+      }
+      .p_decr {
+        font-size: 18px;
+        color: gray;
+        line-height: 25px;
+      }
+      .tabs {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        .item {
+          width: 50%;
+          padding: 10px 20px 10px 0;
+          border-bottom: 2px solid gray;
+          font-size: 20px;
+          font-weight: 600;
+          color: gray;
+          
         }
-        span {
-          color: #fff;
+        .active {
+          width: 50%;
+          padding: 10px 20px 10px 0;
+          border-bottom: 2px solid #47bf6f;
+          font-size: 20px;
+          font-weight: 600;
+          color: #000;
+        }
+      }
+      .content {
+        list-style: none;
+        padding: 10px 0;
+        .item {
+            i{
+                font-size: 16px;
+                color: #47bf6f;
+                padding-right: 15px;
+            }
+          padding: 10px 0 10px 0;
+          font-size: 18px;
+          color: gray;
         }
       }
     }
-    .container-fluit {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .container_70 {
-        width: 90%;
-        display: flex;
-        padding: 50px 0;
-        justify-content: space-between;
-        flex-direction: column;
-        .info_box {
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          .info_title {
-            font-size: 18px;
-            letter-spacing: 4px;
-          }
-          .title1 {
-            font-size: 14px;
-            font-weight: 200;
-            line-height: 25px;
-            letter-spacing: 3px;
-          }
-        }
-        .progress_box {
-          margin-left: 30px;
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          .progres_item {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            margin: 20px 0;
-            .progress {
-              width: 90%;
-              height: 15px;
-              border-bottom: 1px solid rgb(250, 183, 2);
-              display: flex;
-              justify-content: flex-start;
-              align-items: center;
-              .shape {
-                height: 100%;
-                width: 80%;
-                background-color: rgb(250, 183, 2);
-              }
-            }
-            .title {
-              margin-top: 30px;
-            }
-          }
-        }
+    .img {
+      width: 50%;
+      margin-top: 50px;
+      img {
+        width: 100%;
       }
     }
   }
+}
+}
+@media (max-width:1024px){
+    .about__ {
+  height: 20rem;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://demo.ovatheme.com/transflash/wp-content/uploads/2021/12/header-banner-service-air-freight.jpg);
+  .container_70 {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    .title {
+      color: #fff;
+      font-size: 42px;
+      font-weight: 600;
+    }
+    .link {
+      color: gray;
+      font-size: 20px;
+      font-family: "Courier New", Courier, monospace;
+      a {
+        color: rgb(201, 201, 201);
+        text-decoration: none;
+        padding: 5px 10px;
+        transition: 0.3 all linear;
+        &:hover {
+          color: #47bf6f;
+        }
+      }
+      span {
+        color: rgb(201, 201, 201);
+      }
+    }
+  }
+}
+.abouts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  .container_70 {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .info {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 30px;
+      .tit {
+        font-size: 18px;
+        color: #000;
+        font-weight: 700;
+      }
+      .title {
+        font-size: 36px;
+        color: #000;
+        font-weight: 700;
+      }
+      .p_decr {
+        font-size: 18px;
+        color: gray;
+        line-height: 25px;
+      }
+      .tabs {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        .item {
+          width: 50%;
+          padding: 10px 20px 10px 0;
+          border-bottom: 2px solid gray;
+          font-size: 20px;
+          font-weight: 600;
+          color: gray;
+          
+        }
+        .active {
+          width: 50%;
+          padding: 10px 20px 10px 0;
+          border-bottom: 2px solid #47bf6f;
+          font-size: 20px;
+          font-weight: 600;
+          color: #000;
+        }
+      }
+      .content {
+        list-style: none;
+        padding: 10px 0;
+        .item {
+            i{
+                font-size: 16px;
+                color: #47bf6f;
+                padding-right: 15px;
+            }
+          padding: 10px 0 10px 0;
+          font-size: 18px;
+          color: gray;
+        }
+      }
+    }
+    .img {
+      width: 100%;
+      margin-top: 50px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
 }

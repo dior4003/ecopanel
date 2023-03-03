@@ -1,112 +1,60 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 export default function Section2() {
   const data = [
     {
-      icon: "fa-solid fa-gears",
-      title: "Мобильность",
-      decr: `Сэндвич-панели - В единственный материал, который позволяет при
-                Необходимости Демонтировать а конструкцию и собрать её В другом
-                месте.`,
+      class: "fa-solid fa-road",
+      title: "Dedicated lanes",
+      decr: "We offer high quality lanes from top broker and customers.",
     },
     {
-      icon: "fa-solid fa-screwdriver-wrench",
-      title: "Быстрота сборки",
-      decr: ` По примерным
-оценкам, сэндвич- паналь толщиной 10 см. утепленная
-пенополистиролом, сохраняет тепло так же, как 340 см железобетона; | 224 см силикатного кирпича: 152ом утолщенного силикатного кирпича 132см
-керамзитобетона.`,
+      class: "fa-solid fa-people-group",
+      title: "Drivers",
+      decr: "We are ready to work with Company drivers, Lease-drivers, Owner Operators.",
     },
     {
-      icon: "fa-solid fa-briefcase",
-      title: "Гигиеничность",
-      decr: `Конструкция
-панелей исключает
-появление грибков
-или плесени,
-а материалы,
-10 из которых 
-изготавливаются
-панели,
-непривлекательны
-Для грызунов.`,
+      class: "fa-solid fa-chart-line",
+      title: "Intership Programs",
+      decr: "Our company annually offers international internship programs for students from low income families.",
     },
     {
-      icon: "fa-solid fa-lightbulb",
-      title: "Низкая теплопроводность",
-      decr: `По примерным
-оценкам, сэндвич- паналь толщиной 10 см. утепленная
-пенополистиролом,
-сохраняет тепло
-так же, как
-340 см
-железобетона; | 224 см силикатного
-кирпича:
-152ом утолщенного
-силикатного
-кирпича
-132см
-керамзитобетона; 102 см глиняного кирпича
-94 см шлакобетона`,
+      class: "fa-solid fa-truck-moving",
+      title: "Land Freight",
+      decr: "We are the high quality and and highly secured road transportation provider.",
     },
     {
-      icon: "fa-solid fa-comments",
-      title: "Большой срок службы",
-      decr: `Срок эксплуатации
-
-сэндвич-панелей - составляет в 1-n
-
-среднем около 50
-
-лет. Кроме того,
-
-поскольку здание из-
-
-сэндвич-панелей -
-
-сборная
-
-конструкция, при повреждении одного- из элементов заменяют только`,
+      class: "flaticon flaticon-warehouse",
+      title: "Warehousing",
+      decr: "We have facilities ready to handle your supply chain, at origin or destination.",
     },
     {
-      icon: "fa-solid fa-chart-line",
-      title: "экономичность",
-      decr: `Транспортные
-
-или железобетона.
-
-меньше, чем,
-
-например
-
-на доставку кирпича
-
-стены из сэндвич- панелей до 50 раз
-
-квадратного метра
-
-расходы на доставку`,
+      class: "flaticon flaticon-logistics-delivery",
+      title: "Custom Clearance",
+      decr: "Our company can guide you through shipment customs clearance process.",
     },
   ];
   return (
-    <section className="section2">
+    <section className="section_2">
       <div className="container_70">
-        <h1 className="title">преимущества</h1>
-        <div className="servis_box">
-          {data.map((item, i) => (
-            <div className="servis_card" key={i}>
-              <div className="card_icon">
-                <div className="overlay">
-                  <i className={item.icon}></i>
-                </div>
-              </div>
-              <div className="card_wrap">
-                <h2 className="card_title">{item.title}</h2>
-                <p className="card_decr">{item.decr}</p>
-              </div>
-            </div>
-          ))}
+        <div className="content_header">
+          <h1 className="title">Top transportation and logistics company</h1>
+          <p className="decr">
+            Provides high quality, comprehensive transportation services and
+            always understand client's requirements.
+          </p>
         </div>
+        {data.map((item, id) => (
+          <div className="card" key={id}>
+            <div className="card_body">
+              <div className="icon">
+                <i className={item.class}></i>
+              </div>
+              <h3 className="title">{item.title}</h3>
+              <p className="decr">{item.decr}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

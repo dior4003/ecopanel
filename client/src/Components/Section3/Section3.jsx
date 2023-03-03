@@ -1,76 +1,183 @@
-import React, { useState } from "react";
-import { Parallax } from "react-parallax";
-import img1 from "../../images/corusel1.jpg";
-import img2 from "../../images/corusel2.jpg";
-import img3 from "../../images/corusel3.jpg";
-import img4 from "../../images/corusel4.jpg";
-import img5 from "../../images/corusel5.jpg";
-import img6 from "../../images/corusel6.jpg";
+import React, { useCallback, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
+
+
+
 export default function Section3() {
-  const data = [img1, img2, img3, img4, img5, img6];
+  const [size, setSize] = useState(100);
   const [current, setCurrent] = useState(0);
-  const hendleClick = (dir) => {
-    if (current > data.length - 3) {
-      setCurrent(data.length - 3);
-    } else if (current < 1) {
+  const [active, setActive] = useState(null);
+  const [move ,setMove]=useState(0)
+
+  const data = [
+    {
+      img: "https://www.stltruckers.com/assets/thumbs/webp/43357e466827b80a6b80a44706c33481.webp",
+      title: "Company Driver",
+      decr: "Become our company driver.",
+      descr: {
+        title: "Company Driver",
+        title1: `Stable salary, flexible schedule and on time payments are provided
+            by our company for all company drivers`,
+        info: [
+          {
+            class: "fa-solid fa-dollar-sign",
+            title: " 0,65 - 0,75",
+          },
+          {
+            class: "fa-solid fa-road",
+            title: "3000-5000 mile",
+          },
+          {
+            class: "fa-solid fa-user-check",
+            title: "Experience 1+",
+            decr: "Offer secure, reliable and environmentally friendly rail freight transportation.",
+          },
+          {
+            class: "flaticon-24-hours",
+            title: "24/7 dispatch",
+            decr: "We are the high quality and and highly secured road transportation provider.",
+          },
+        ],
+      },
+    },
+    {
+      img: "https://www.stltruckers.com/assets/thumbs/crop/832x468/633ee217183ed02d053a73afda81b691.webp",
+      title: "Lease Driver",
+      decr: "Brand new trucks are available for purchase and rent for lease drivers",
+      descr: {
+        title: "Lease Driver",
+        title1: `Brand new trucks are available for purchase and rent for lease drivers`,
+        info: [
+          {
+            class: "fa-solid fa-dollar-sign",
+            title: "$9000 - $15000",
+          },
+          {
+            class: "fa-solid fa-truck-moving",
+            title: "Fully equipped",
+          },
+          {
+            class: "fa-solid fa-user-check",
+            title: "Experience 1+",
+            decr: "Offer secure, reliable and environmentally friendly rail freight transportation.",
+          },
+          {
+            class: "flaticon-24-hours",
+            title: "24/7 dispatch",
+            decr: "We are the high quality and and highly secured road transportation provider.",
+          },
+        ],
+      },
+    },
+  ];
+  const next = () => {
+    setActive("active");
+    if (current < 0) {
+      setCurrent(data.length - 1);
+    } else if (current >= data.length - 1) {
       setCurrent(0);
-    }
-    if (current > -1 && current < data.length - 2) {
-      setCurrent((prev) => prev + dir);
-    }
+    } else setCurrent((prev) => prev + 1);
   };
-  const move = (index) => {
-    return (index - current) * 110;
+  useCallback(() => {
+    const timer = setInterval(() => {
+      next();
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [next]);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setActive(null);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [active]);
+  const prev = () => {
+    setActive("active");
+    if (current <= 0) {
+      setCurrent(data.length - 1);
+    } else if (current > data.length - 1) {
+      setCurrent(0);
+    } else setCurrent((prev) => prev - 1);
   };
+  const data1 = [
+    {
+      class: "fa-solid fa-dollar-sign",
+      title: " 0,65 - 0,75",
+    },
+    {
+      class: "fa-solid fa-road",
+      title: "3000-5000 mile",
+    },
+    {
+      class: "fa-solid fa-user-check",
+      title: "Experience 1+",
+      decr: "Offer secure, reliable and environmentally friendly rail freight transportation.",
+    },
+    {
+      class: "flaticon-24-hours",
+      title: "24/7 dispatch",
+      decr: "We are the high quality and and highly secured road transportation provider.",
+    },
+  ];
+
   return (
-    <section className="section3">
-      <Parallax
-        bgImageSize={{ width: "100%" }}
-        //   bgImageStyle={{ width: "150%", position: "absolute" }}
-        bgImage="https://demo.farost.net/karion/wp-content/uploads/2017/10/bg-section-portfolio-carouel.png"
-        strength={200}
+    <section className="section_3">
+      <div
+        className="slider_container"
+        onMouseEnter={() => setSize(110)}
+        onMouseLeave={() => setSize(100)}
       >
-        <div className="container_box">
-          <div className="box_wrap"></div>
-          <h1 className="wrap_title">НЕДАВНИЕ ПРОЕКТЫ</h1>
-          <div className="shape">
-            <div className="line"></div>
-            <i className="fa-solid fa-square"></i>
-            <div className="line"></div>
+        {data.map((item, id) => (
+          <div
+            className={`slider `}
+            onMouseMove={(e) => {
+              setMove(e.clientX);
+            }}
+            style={{
+              transition: ".6s all linear",
+              backgroundImage: `url(${item.img})`,
+              backgroundSize: `${size}% ${size}%`,
+              backgroundPosition: "center center",
+              position: "absolute",
+              left: `${current === id ? 0 : current * 100}%`,
+              zIndex: `${current === id ? 1 : 0}`,
+            }}
+          >
+            <h3 className="title">{item.title}</h3>
+            <p className="decr">{item.decr}</p>
           </div>
-          <div className="corusel_box">
-            {data.map((item, i) => (
-              <div
-                key={i}
-                className="slider_card"
-                style={{
-                  transform: `translate(${move(i)}%)`,
-                  background: `url(${item})`,
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "cover",
-                }}
-              ></div>
-            ))}
-          </div>
-          <div className="navigation">
-            <span className="btn" onClick={() => hendleClick(-1)}>
-              <i className="fa-solid fa-chevron-left"></i>
-            </span>
-            <span className="btn" onClick={() => hendleClick(1)}>
-              <i className="fa-solid fa-chevron-right"></i>
-            </span>
-          </div>
-          <div className="pagination">
-            {data.map((item, i) => (
-              <div
-                key={i}
-                onClick={() => setCurrent(i)}
-                className={`dot ${i === current ? "active" : null}`}
-              ></div>
-            ))}
-          </div>
+        ))}
+      </div>
+      <div className="info_container">
+        <div className="buttons">
+          <span className="prev" onClick={prev}>
+            <i className="fa-solid fa-chevron-left"></i>
+          </span>
+          <span className="next" onClick={next}>
+            <i className="fa-solid fa-chevron-right"></i>
+          </span>
         </div>
-      </Parallax>
+        <div className={`info ${active}s`}>
+          <h1 className="title">
+            <b>{data[current].descr.title}</b>
+          </h1>
+          <p className="decr">{data[current].descr.title1}</p>
+          <ul className="services">
+            {data[current].descr.info.map((item, id) => (
+              <li
+                className="ite"
+               
+              >
+                <i className={item.class}></i>
+                <span>{item.title}</span>
+              </li>
+            ))}
+          </ul>
+          {/* <Link to="/" className="btn__">
+            See more services
+          </Link> */}
+        </div>
+      </div>
     </section>
   );
 }

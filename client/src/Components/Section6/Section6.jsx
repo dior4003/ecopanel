@@ -1,69 +1,105 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import img1 from "../../images/news1.jpg";
-import img2 from "../../images/news2.jpg";
-import img3 from "../../images/news3.jpg";
-export default function Section6() {
-  const data = [
-    {
-      img: img1,
-      data: "05 ноябрь 2018",
-      comment: " 03 Комментарии",
-      title: "Наш завод расположен в Ташкенте",
-      text: `Наш завод расположен в Ташкенте. Мы поводим строгий контроль
-                качества. Продукция, которая поставляется нашим клиентам,
-                соответствует самым жестким требованиям, предъявляемым к
-                современным теплоизоляционным строительным материалам. Система
-                Управления Качеством дает потребителям нашей продукции гарантию
-                стабильности качества в течение всего времени ее выпуска.`,
-      link: "",
-    },
-    {
-      img: img2,
-      link: "",
-      data: "17 январь 2020",
-      comment: " 08 Комментарии",
-      title: "В нашей команде работают только профессионалы",
-      text: `В нашей команде работают только профессионалы, с соответствующим образованием и достойным опытом работы. Мы внимательно относимся к приобретению металла, утеплителей, клея и оборудования для изготовления сэндвич-панелей. Мы знаем, каким должен быть данный материал и внимательно проверяем, соответствует ли сэндвич-панель заявленным характеристикам, и только в случае полного соответствия и осуществления выходного контроля товар отгружается заказчику.`,
-    },
-    {
-      img: img3,
-      data: "06 апрель 2020",
-      link: "",
-      comment: " 03 Комментарии",
-      title: "Отличительной особенностью",
-      text: `Отличительной особенностью сэндвич-панелей является наличие специального замкового соединения по торцам панелей, которое обеспечивает надежное сцепление элементов конструкции, предотвращает возможность попадания влаги в слой утеплителя. Именно данное замковое соединение, прочное и герметичное, во многом обуславливает простоту и легкость монтажа сэндвич-панелей на любых объектах, даже при неблагоприятных погодных условиях.`,
-    },
-  ];
+import React, { useRef, useState } from "react";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import vid from "../../img/video1.MP4";
+import vid2 from "../../img/video2.MP4";
+import vid3 from "../../img/video3.MP4";
+
+const Item = (props) => {
+  const className = "item level" + props.level;
+  const videoEl = useRef(null);
+
+  const handleLoadedMetadata = () => {
+    const video = videoEl.current;
+    if (!video) return;
+    console.log(`The video is ${video.duration} seconds long.`);
+  };
   return (
-    <section className="section6">
-      <div className="container_70">
-        <h1 className="title">КОНТРОЛЬ КАЧЕСТВА</h1>
-        <div className="news">
-          {data.map((item, i) => (
-            <Link to={item.link} key={i}>
-              <div className="news_item">
-                <div className="news_img">
-                  <img src={item.img} alt="Ecopaneltech.uz news " />
-                  <div className="news_data">
-                    <div className="data">
-                      <i className="fa-solid fa-calendar-days"></i>
-                      <span className="data">{item.data}</span>
-                    </div>
-                    <div className="data">
-                      <i className="fa-solid fa-comments"></i>
-                      <span className="data">{item.comment}</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="shape"></div>
-                <div className="news_title">{item.title}</div>
-                <p className="news_text">{item.text.slice(0, 50)}...</p>
-              </div>
-            </Link>
-          ))}
+    <div className={className}>
+      {props.level === 0 ? (
+        <video
+          src={props.vid}
+          controls={props.level === 0 ? true : false}
+          autoPlay={props.level === 0 ? true : false}
+          loop={props.level === 0 ? true : false}
+          muted
+          ref={videoEl}
+          onLoadedMetadata={handleLoadedMetadata}
+        ></video>
+      ) : (
+        <img src={props.img} alt="" />
+      )}
+    </div>
+  );
+};
+
+export default function Corusel() {
+  const [active, setActive] = useState(1);
+  const [item, setItem] = useState([
+    {
+      vid: vid,
+      img: "https://www.stltruckers.com/assets/thumbs/webp/a48c2bd628d9e74ea5d146ad0baee742.webp",
+    },
+    {
+      vid: vid2,
+      img: "https://www.stltruckers.com/assets/thumbs/crop/544x544/d1e2da376b54161e67342411fd59249e.webp",
+    },
+    {
+      vid: vid3,
+      img: "https://www.stltruckers.com/assets/thumbs/crop/832x468/633ee217183ed02d053a73afda81b691.webp",
+    },
+  ]);
+  const [items, setItems] = useState(item);
+  const [direction, setDirection] = useState("");
+  function generateItems() {
+    var items = [];
+    var level;
+    for (var i = active - 1; i < active + 2; i++) {
+      var index = i;
+      if (i < 0) {
+        index = item.length + i;
+      } else if (i >= item.length) {
+        index = i % item.length;
+      }
+
+      level = active - i;
+      items.push(
+        <Item
+          key={index}
+          id={item[index]}
+          level={level}
+          vid={item[index].vid}
+          active={active}
+          img={item[index].img}
+        />
+      );
+    }
+    return items;
+  }
+  function moveLeft() {
+    var newActive = active;
+    newActive--;
+    setActive(newActive < 0 ? items.length - 1 : newActive);
+    setDirection("left");
+  }
+
+  function moveRight() {
+    var newActive = active;
+    setActive((newActive + 1) % items.length);
+    setDirection("right");
+  }
+  return (
+    <div className="section6">
+      <div id="carousel" className="noselect">
+        <div className="arrow arrow-left" onClick={moveLeft}>
+          <i className="fa-solid fa-arrow-left"></i>
+        </div>
+        <ReactCSSTransitionGroup transitionName={direction}>
+          {generateItems()}
+        </ReactCSSTransitionGroup>
+        <div className="arrow arrow-right" onClick={moveRight}>
+          <i className="fa-solid fa-arrow-right"></i>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

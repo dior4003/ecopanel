@@ -1,64 +1,130 @@
-import React from "react";
-import { Parallax } from "react-parallax";
-import useCounter from "../Hooks/UseCounter";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Section5() {
-  const count = useCounter(2000);
-  const data = [
-    {
-      num: 9,
-      title: "Видов продукции",
-    },
-    {
-      num: 100,
-      title: "Гарантируем качество",
-    },
-    {
-      num: 5,
-      title: "лет на рынке",
-    },
-    {
-      num: 1523,
-      title: "довольных клиентов",
-    },
-  ];
+  const [tabs, setTabs] = useState(0);
   return (
-    <section className="section5">
-        <Parallax
-          bgImageSize={{ width: "100%" }}
-          bgImage="https://demo.farost.net/karion/wp-content/uploads/2017/10/bg-section-wholove.png"
-          strength={400}
-        >
-          <div className="content">
-            <div className="container_70">
-              <h2 className="title_1">
-                СТЕНОВЫЕ СЭНДВИЧ ПАНЕЛИ ОТ ECO PANEL TECH - ЦЕНА НИЖЕ, КАЧЕСТВО
-                ВЫШЕ!
-              </h2>
-              <p className="title_2">
-                На сегодняшний день, наши сендвич панели для стен являются очень
-                популярными. С помощью них можно быстро построить все что
-                угодно. Сэндвич панели в Узбекистане используются в частном
-                домостроении, при постройке, как одноэтажных, так и многоэтажных
-                домов. Более того, кроме быстроты постройки здания и легкости
-                конструкции, стоимость сэндвич панелей является очень
-                оптимальной и не высокой. При желании панели сэндвич можно легко
-                модернизировать. Поэтому вы можете с уверенностью заказать
-                сэндвич панели от Eco Panel Tech и наслаждаться его качеством.
+    <section className="section_5">
+      <div className="container_70">
+        <div className="header">
+          <h1 className="title">Hiring Process</h1>
+        </div>
+        <ul className="tabs">
+          <li
+            onClick={() => setTabs(0)}
+            className={`tab_item ${tabs === 0 ? "active" : null}`}
+          >
+            Before journey
+          </li>
+          <li
+            onClick={() => setTabs(1)}
+            className={`tab_item ${tabs === 1 ? "active" : null}`}
+          >
+            During journey
+          </li>
+          <li
+            onClick={() => setTabs(2)}
+            className={`tab_item ${tabs === 2 ? "active" : null}`}
+          >
+            After journey
+          </li>
+        </ul>
+        {tabs === 0 ? (
+          <div className="tab_content">
+            <div className="content_info">
+              <p className="decr">
+                We guarantee strict compliance to all procedures before, during
+                and after journey.
               </p>
-              <div className="counter_box">
-                {data.map((item, i) => (
-                  <div className="counter_item" key={i}>
-                    <span className="item_num">
-                      {count > item.num ? item.num : count}
-                    </span>
-                    <span className="item_title">{item.title}</span>
-                  </div>
-                ))}
-              </div>
+              <ul className="lists">
+                <li className="list_item">
+                  <i class="fab fa-jira"></i>
+                  Standard operating procedures for vehicle maintenance
+                </li>
+                <li className="list_item">
+                  <i class="fab fa-jira"></i>
+                  Standard operating procedures for vehicle maintenance
+                </li>
+                <li className="list_item">
+                  <i class="fab fa-jira"></i>
+                  Standard operating procedures for vehicle maintenance
+                </li>
+              </ul>
+              <Link to="/" className="btn__">
+                View details
+              </Link>
+            </div>
+            <div className="content_img">
+              <img
+                src="https://demo.ovatheme.com/transflash/wp-content/uploads/2021/12/our-process-tab-right.jpg"
+                alt=""
+              />
             </div>
           </div>
-        </Parallax>
+        ) : null}
+        {tabs === 1 ? (
+          <div className="tab_content">
+            <div className="content_info">
+              <p className="decr">
+                During journey, we have to face with logistics logistics, so an
+                emergency response plan is a must
+              </p>
+              <ul className="lists">
+                <li className="list_item">
+                  <i class="fab fa-jira"></i>
+                  Keeping track of condition of containers during journey
+                </li>
+                <li className="list_item">
+                  <i class="fab fa-jira"></i>
+                  Use the ISO container inspection checklist View details
+                </li>
+              </ul>
+              <Link to="/" className="btn__">
+                View details
+              </Link>
+            </div>
+            <div className="content_img">
+              <img
+                src="https://demo.ovatheme.com/transflash/wp-content/uploads/2021/12/our-process-tab-righ-02.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        ) : null}
+        {tabs === 2 ? (
+          <div className="tab_content">
+            <div className="content_info">
+              <p className="decr">
+                Our process will continue after journey by checking all tasks
+                were completed to find out issues
+              </p>
+              <ul className="lists">
+                <li className="list_item">
+                  <i class="fab fa-jira"></i>
+                  Write a short detailed report
+                </li>
+                <li className="list_item">
+                  <i class="fab fa-jira"></i>
+                  Get customer feedback on the logistics service quality
+                </li>
+                <li className="list_item">
+                  <i class="fab fa-jira"></i>
+                  Complete incident management checklist
+                </li>
+              </ul>
+              <Link to="/" className="btn__">
+                View details
+              </Link>
+            </div>
+            <div className="content_img">
+              <img
+                src="https://demo.ovatheme.com/transflash/wp-content/uploads/2021/12/our-process-tab-righ-03.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        ) : null}
+      </div>
     </section>
   );
 }

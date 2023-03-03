@@ -12,10 +12,6 @@ app.use(express.static(path.resolve("./client/build")));
 
 app.get("*", (req, res) => {
   res.sendFile(path.resolve("./client/build/index.html"));
-  console.log(path.resolve("./client/build/index.html"));
-});
-app.get("/hello", (req, res) => {
-  res.send("hello");
 });
 app.listen(process.env.PORT, () => {
   console.log("server started");
